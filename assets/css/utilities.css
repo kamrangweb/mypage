@@ -1,0 +1,96 @@
+.relative{
+    position: relative;
+}
+
+.text-right{
+    text-align: right;
+}
+
+
+.text-center{
+    text-align: center;
+}
+
+.font-size-40{
+    font-size: 40px;
+}
+
+.font-size-700{
+    font-size: 40px;
+}
+
+.text-white{
+    color: #4B5e68;
+}
+
+.display-flex{
+    display: flex;
+}
+
+
+.margin-auto{
+    margin: 0 auto;
+}
+
+h1, h2{
+    color: rgb(12, 93, 118);
+}
+
+
+@media screen and (min-width: 1024px) {
+    .desktop-none{
+        display: none;
+    }
+
+    .desktop-show{
+        display: block;
+    }
+
+    .margin-bottom-30{
+        margin-bottom: 30px;
+    }
+    .margin-bottom-80{
+        margin-bottom: 80px;
+    }
+    .margin-bottom-150{
+        margin-bottom: 150px;
+    }
+    
+    .margin-bottom-95{
+        margin-bottom: 95px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .mobile-none{
+        display: none;
+    }
+
+    .mobile-show{
+        display: block;
+    }
+
+    .margin-bottom-30{
+        margin-bottom: 15px;
+    }
+    .margin-bottom-80{
+        margin-bottom: 15px;
+    }
+    .margin-bottom-150{
+        margin-bottom: 30px;
+    }
+    
+    .margin-bottom-95{
+        margin-bottom: 15px;
+    }
+
+    .justify-mobile-center{
+        justify-content: center;
+    }
+
+    .justify-between{
+        justify-content: space-between;
+    }
+
+    
+}
