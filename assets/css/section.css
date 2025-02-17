@@ -90,7 +90,9 @@ main{
 
 .port-header-item h1 .typewrite{
     font-size: 40px;
-    color: rgb(12, 93, 118);
+    /* color: rgb(12, 93, 118); */
+    color: #bdd8e1;
+    /* color: #f1f1f3; */
     border-right: .15em solid transparent;
     animation: 
     typing 3.5s steps(40, end),
@@ -99,7 +101,8 @@ main{
 
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: rgb(12, 93, 118); }
+    /* 50% { border-color: rgb(12, 93, 118); } */
+    50% { border-color: #bdd8e1; }
   }
 
 
@@ -121,7 +124,7 @@ main{
     background: url('../image/bg-img-portfolio.png');    
     background-size: cover;
     /* background-position: 140px -100px; */
-    background-position: right;
+    background-position: left;
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 500px;
