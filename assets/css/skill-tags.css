@@ -1,0 +1,59 @@
+:root {
+	/* Theme */
+	--primary-color: #1662f3;
+	--light-color: #d0dffc;
+	--dark-color: #bdd8e1;
+	/* --regular-font: 'Inter', sans-serif; */
+}
+
+
+.tags {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+	gap: 1rem;
+}
+
+.tag {
+	--color: var(--light-color);
+	font-family: var(--regular-font);
+	font-size: 1rem;
+	border-radius: 100rem;
+	box-shadow: 0 0 0 2px var(--light-color);
+	background-color: transparent;
+	color: var(--dark-color);
+	font-weight: bold;
+	transition:
+		background-color 250ms ease,
+		box-shadow 250ms ease;
+}
+
+.tag>a {
+	display: inline-block;
+	position: relative;
+	color: var(--dark-color);
+	text-decoration: none;
+	padding: .5rem 1rem .5rem 2rem;
+}
+
+.tag>a::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 1rem;
+	width: .5rem;
+	height: .5rem;
+	border-radius: 100%;
+	background-color: var(--color);
+	transform: translateY(-50%);
+}
+
+.tag:hover{
+	background-color: var(--light-color);
+	box-shadow: 0 0 0 calc(2px + .25rem) var(--light-color);
+    color: rgb(12, 93, 118);
+}
+.tag:hover a{
+    color: rgb(12, 93, 118);
+}
