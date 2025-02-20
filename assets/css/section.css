@@ -88,12 +88,19 @@ main{
     margin: 0 auto;
 }
 
+.port-header-item h1 .typewrite::before{
+    line-height: 100%;
+}
+.port-header-item h1 .typewrite::after{
+    line-height: 15px;
+    border-right: .15em solid transparent;
+
+}
 .port-header-item h1 .typewrite{
     font-size: 40px;
     /* color: rgb(12, 93, 118); */
     color: #bdd8e1;
     /* color: #f1f1f3; */
-    border-right: .15em solid transparent;
     animation: 
     typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
