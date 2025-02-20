@@ -100,7 +100,9 @@ h1, h2{
       scroll-behavior: smooth; 
     }
 
-    .tags {
-        gap: 3rem;
+    .tag {
+        /* gap: 3rem; */
+        /* margin-left: -50px; */
+        margin: 0 50px;
     }
   }
