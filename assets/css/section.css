@@ -340,6 +340,7 @@ background: #159957; /* fallback for old browsers */
     font-size: 2vh;
     border-radius: 10px;
     color: #bdd8e1;
+    font-weight: 500;
 }
 
 .contact-details-item i{
