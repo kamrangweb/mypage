@@ -353,6 +353,9 @@ background: #159957; /* fallback for old browsers */
     font-size: 18px;
     color: #bdd8e1;
 }
+.contact-details-item a{
+    color: #bdd8e1;
+}
 
 footer {
     width: 100%;
