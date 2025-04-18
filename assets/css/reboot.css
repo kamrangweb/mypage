@@ -57,3 +57,24 @@ figure{
     }
 } */
 
+
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #bdd8e1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(12, 93, 118); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(7, 66, 84); 
+    cursor: default;
+  }
