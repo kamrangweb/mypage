@@ -71,6 +71,11 @@ figure{
     background: #bdd8e1; 
   }
    
+  /* Track */
+  ::-webkit-scrollbar-track:hover {
+    cursor: default;
+}
+   
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: rgb(12, 93, 118); 
