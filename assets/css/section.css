@@ -338,7 +338,7 @@ background: #159957; /* fallback for old browsers */
     flex-direction: column;
     justify-content: space-around;
     font-size: 2vh;
-    border-radius: 10px;
+    border-radius: 15px;
     color: #bdd8e1;
     font-weight: 500;
 }
