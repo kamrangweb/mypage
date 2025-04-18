@@ -80,6 +80,14 @@ main{
     font-size: 22px;
 }
 
+.port-header-item .openblock{
+    margin: 0 auto;
+    border: 2px solid #0c5d76;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #0c5d76;
+}
+
 .port-header-change{
     display: none;
 }
@@ -451,7 +459,7 @@ footer .copyright p, .copyright span{
     }
 
     .port-header .column{
-        margin: 2px;
+        margin: 0px;
         padding: 0;
     }
 
