@@ -160,34 +160,29 @@ $('button.back-to-top').click(function() {
 });
 
 
-// Scroll pozisyonunu takip et
-window.onscroll = function() {
-  toggleBackToTopButton();
-  updateProgressBar();
+let calcScrollValue = () => {
+  let scrollProgress = document.getElementById("progress");
+  let progressValue = document.getElementById("progress-value");
+  let pos = document.documentElement.scrollTop;
+  let calcHeight =
+    document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  let scrollValue = Math.round((pos * 100) / calcHeight);
+
+  if (pos > 100) {
+    scrollProgress.style.display = "grid";
+  } else {
+    scrollProgress.style.display = "none";
+  }
+
+  scrollProgress.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth" 
+    });
+  });
+
+  scrollProgress.style.background = `conic-gradient(#0c5d76 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
 };
 
-// Butonun görünür olmasını sağla
-function toggleBackToTopButton() {
-  const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-
-  // Eğer sayfa 300px'den fazla kaydırıldıysa butonu göster
-  if (scrollPosition > 300) {
-    document.querySelector('.back-to-top').classList.add('show');
-  } else {
-    document.querySelector('.back-to-top').classList.remove('show');
-  }
-}
-
-// Progress bar'ı güncelle
-function updateProgressBar() {
-  const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-  const progress = (scrollPosition / docHeight) * 100;
-
-  document.querySelector('.progress-bar').style.width = progress + '%';
-}
-
-// Geri dön butonuna tıklama işlevi
-document.querySelector('.back-to-top').addEventListener('click', function() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+window.onscroll = calcScrollValue;
+window.onload = calcScrollValue;
