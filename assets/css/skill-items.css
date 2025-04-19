@@ -1,5 +1,4 @@
 .area{
-    background: -webkit-linear-gradient(to left, #8eb9bd, #4e97c8); 
     background: #67B26F;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #4ca2cd, #67B26F);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #4ca2cd, #67B26F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -14,7 +13,7 @@
     position: fixed;
     right: 0;
     top: 0;
-    z-index: -1;
+    z-index: 0;
 }
 
 /* KEYFRAMES */
@@ -54,28 +53,28 @@
 
 /* Balon animasyon süreleri ve sağa kaydırma (Desktop) */
 .x1 {
-    animation: animateBubble 25s linear infinite;
-    left: 15%;
+    animation: animateBubble 55s linear infinite;
+    left: 23%;
 }
 
 .x2 {
-    animation: animateBubble 30s linear infinite;
-    left: 27%;
+    animation: animateBubble 65s linear infinite;
+    left: 81%;
 }
 
 .x3 {
-    animation: animateBubble 50s linear infinite;
-    left: 45%;
+    animation: animateBubble 75s linear infinite;
+    left: 34%;
 }
 
 .x4 {
-    animation: animateBubble 48s linear infinite;
-    left: 22%;
+    animation: animateBubble 88s linear infinite;
+    left: 55%;
 }
 
 .x5 {
-    animation: animateBubble 72s linear infinite;
-    left: 75%;
+    animation: animateBubble 92s linear infinite;
+    left: 89%;
 }
 
 .x6 {
@@ -96,11 +95,11 @@
         font-size: 14px;
     }
 
-    /* Mobilde balonların alt kısımdan başlaması */
+    /* Mobilde balonların alt kısımdan başlaması
     .x1, .x2, .x3, .x4, .x5, .x6 {
-        margin-top: 150%; /* Balonların başlangıç noktası */
-        animation-duration: calc(30s + (20s * random())); /* Animasyon sürelerini 30s - 50s arası yap */
-    }
+       /* margin-top: 150%;  Balonların başlangıç noktası
+        /* animation-duration: calc(60s + (20s * random())); 
+    } */
 
     @keyframes animateBubble {
         0% {
@@ -122,28 +121,30 @@
 
     /* Balonların başlangıç noktalarını biraz sağa kaydırma */
     .x1 {
-        animation: animateBubble 43s linear infinite;
+        animation: animateBubble 70s linear infinite;
         left: 35%;
     }
 
     .x2 {
-        animation: animateBubble 54s linear infinite;
-        left: 50%;
+        animation: animateBubble 77s linear infinite;
+
+        left: 90%;
     }
 
     .x3 {
-        animation: animateBubble 45s linear infinite;
+        animation: animateBubble 88s linear infinite;
         left: 65%;
     }
 
     .x4 {
-        animation: animateBubble 40s linear infinite;
+        animation: animateBubble 99s linear infinite;
+
         left: 80%;
     }
 
     .x5 {
-        animation: animateBubble 65s linear infinite;
-        left: 95%;
+        animation: animateBubble 111s linear infinite;
+        left: 45%;
     }
 
     .x6 {

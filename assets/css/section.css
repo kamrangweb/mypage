@@ -250,6 +250,7 @@ background: #159957; /* fallback for old browsers */
     background: #67B26F;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #43cf9c, #b9cebb);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #43cf9c, #b9cebb);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     
