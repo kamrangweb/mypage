@@ -37,7 +37,7 @@
     width: 150px;
     height: 150px;
     margin-left: -75px; /* Ortalamak için sol tarafı yarı genişlik kadar kaydırıyoruz */
-    animation: animateBubble 5s linear infinite;
+    animation: animateBubble 1s linear infinite;
     /* box-shadow: 0 20px 30px rgba(22, 121, 105, 0.2), inset 0px 10px 30px 5px rgba(0,255,255,0.5); */
     box-shadow: 0 0 20px rgba(50, 194, 194, 0.5), inset 0px 10px 30px 5px rgba(58, 194, 194, 0.5);
 }
@@ -55,12 +55,12 @@
 /* Balon animasyon süreleri ve sağa kaydırma (Desktop) */
 .x1 {
     animation: animateBubble 25s linear infinite;
-    left: 75%;
+    left: 15%;
 }
 
 .x2 {
-    animation: animateBubble 60s linear infinite;
-    left: 77%;
+    animation: animateBubble 30s linear infinite;
+    left: 27%;
 }
 
 .x3 {
@@ -70,17 +70,17 @@
 
 .x4 {
     animation: animateBubble 48s linear infinite;
-    left: 60%;
+    left: 22%;
 }
 
 .x5 {
-    animation: animateBubble 62s linear infinite;
+    animation: animateBubble 72s linear infinite;
     left: 75%;
 }
 
 .x6 {
     animation: animateBubble 44s linear infinite;
-    left: 90%;
+    left: 88%;
 }
 
 /* Gelişmiş Animasyonlar ile Esneklik */
@@ -122,17 +122,17 @@
 
     /* Balonların başlangıç noktalarını biraz sağa kaydırma */
     .x1 {
-        animation: animateBubble 33s linear infinite;
+        animation: animateBubble 43s linear infinite;
         left: 35%;
     }
 
     .x2 {
-        animation: animateBubble 44s linear infinite;
+        animation: animateBubble 54s linear infinite;
         left: 50%;
     }
 
     .x3 {
-        animation: animateBubble 35s linear infinite;
+        animation: animateBubble 45s linear infinite;
         left: 65%;
     }
 
@@ -142,12 +142,12 @@
     }
 
     .x5 {
-        animation: animateBubble 55s linear infinite;
+        animation: animateBubble 65s linear infinite;
         left: 95%;
     }
 
     .x6 {
-        animation: animateBubble 37s linear infinite;
+        animation: animateBubble 47s linear infinite;
         left: 75%;
     }
 }
