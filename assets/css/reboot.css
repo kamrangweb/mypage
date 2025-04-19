@@ -86,3 +86,12 @@ figure{
     background: rgb(7, 66, 84); 
     cursor: default;
   }
+
+  @media (max-width:465px) {
+    /* width */
+    ::-webkit-scrollbar {
+        display: none;
+    }
+  
+    
+  }

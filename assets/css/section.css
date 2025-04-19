@@ -40,6 +40,7 @@
     max-width: 1200px;
     margin-left: 300px;
     overflow-x: hidden;
+    overflow: hidden;
     position: fixed;
     padding: 0;
 }
@@ -371,14 +372,26 @@ background: #159957; /* fallback for old browsers */
     font-size: 22px;
     color: #bdd8e1;
     font-weight: 900;
+    background: linear-gradient(to right, #43cf9c, #b9cebb);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .contact-details-item h4{
     font-size: 18px;
     color: #bdd8e1;
+    background: linear-gradient(to right, #43cf9c, #b9cebb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .contact-details-item a{
     color: #bdd8e1;
+    background: linear-gradient(to right, #43cf9c, #b9cebb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 footer {
