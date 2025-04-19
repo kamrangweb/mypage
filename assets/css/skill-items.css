@@ -36,7 +36,7 @@
     width: 150px;
     height: 150px;
     margin-left: -75px; /* Ortalamak için sol tarafı yarı genişlik kadar kaydırıyoruz */
-    animation: animateBubble 1s linear infinite;
+    animation: animateBubble 1s linear infinite, sideWays 3s ease-in-out infinite alternate;
     /* box-shadow: 0 20px 30px rgba(22, 121, 105, 0.2), inset 0px 10px 30px 5px rgba(0,255,255,0.5); */
     box-shadow: 0 0 20px rgba(50, 194, 194, 0.5), inset 0px 10px 30px 5px rgba(58, 194, 194, 0.5);
 }
@@ -53,32 +53,32 @@
 
 /* Balon animasyon süreleri ve sağa kaydırma (Desktop) */
 .x1 {
-    animation: animateBubble 55s linear infinite;
-    left: 23%;
+    animation: animateBubble 55s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    left: 13%;
 }
 
 .x2 {
-    animation: animateBubble 65s linear infinite;
-    left: 81%;
+    animation: animateBubble 65s linear infinite, sideWays 3s ease-in-out infinite alternate;
+    left: 71%;
 }
 
 .x3 {
-    animation: animateBubble 75s linear infinite;
-    left: 34%;
+    animation: animateBubble 77s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    left: 24%;
 }
 
 .x4 {
-    animation: animateBubble 88s linear infinite;
-    left: 55%;
+    animation: animateBubble 88s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    left: 45%;
 }
 
 .x5 {
-    animation: animateBubble 92s linear infinite;
-    left: 89%;
+    animation: animateBubble 112s linear infinite, sideWays 3s ease-in-out infinite alternate;
+    left: 19%;
 }
 
 .x6 {
-    animation: animateBubble 44s linear infinite;
+    animation: animateBubble 44s linear infinite, sideWays 3s ease-in-out infinite alternate;
     left: 88%;
 }
 
@@ -109,6 +109,16 @@
             margin-top: -150%; /* Tam kaybolma noktası */
         }
     }
+
+    @keyframes sideWays { 
+        0% { 
+            margin-left:0px;
+        }
+        100% { 
+            margin-left:10px;
+        }
+    }
+    
     
 }
 
@@ -121,34 +131,45 @@
 
     /* Balonların başlangıç noktalarını biraz sağa kaydırma */
     .x1 {
-        animation: animateBubble 70s linear infinite;
+        animation: animateBubble 70s linear infinite, sideWays 2s ease-in-out infinite alternate;
         left: 35%;
     }
 
     .x2 {
-        animation: animateBubble 77s linear infinite;
+        animation: animateBubble 77s linear infinite, sideWays 3s ease-in-out infinite alternate;
 
         left: 90%;
     }
 
     .x3 {
-        animation: animateBubble 88s linear infinite;
+        animation: animateBubble 88s linear infinite, sideWays 4s ease-in-out infinite alternate;
         left: 65%;
     }
 
     .x4 {
-        animation: animateBubble 99s linear infinite;
+        animation: animateBubble 99s linear infinite, sideWays 3s ease-in-out infinite alternate;
 
         left: 80%;
     }
 
     .x5 {
-        animation: animateBubble 111s linear infinite;
+        animation: animateBubble 111s linear infinite, sideWays 4s ease-in-out infinite alternate;
         left: 45%;
     }
 
     .x6 {
-        animation: animateBubble 47s linear infinite;
+        animation: animateBubble 47s linear infinite, sideWays 3s ease-in-out infinite alternate;
         left: 75%;
     }
+
+    @keyframes sideWays { 
+        0% { 
+            margin-left:0px;
+        }
+        100% { 
+            margin-left:80px;
+        }
+    }
+    
 }
+
