@@ -41,7 +41,7 @@
     margin-left: 300px;
     overflow-x: hidden;
     overflow: hidden;
-    position: fixed;
+    /* position: fixed; */
     padding: 0;
 }
 

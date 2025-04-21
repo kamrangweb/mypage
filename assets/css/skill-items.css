@@ -138,7 +138,7 @@
     .x2 {
         animation: animateBubble 77s linear infinite, sideWays 3s ease-in-out infinite alternate;
 
-        left: 90%;
+        left: 80%;
     }
 
     .x3 {
