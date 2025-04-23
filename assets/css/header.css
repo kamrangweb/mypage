@@ -1,10 +1,9 @@
-
 .header{
     height:100%;
     width:300px;
     background: #159957; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #159957, #155799); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #159957, #155799);
+    background: -webkit-linear-gradient(to right, #159957, #155799); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #159957, #155799);
     position: fixed!important;
     z-index: 4;
     overflow-x: hidden;
@@ -69,8 +68,9 @@
     background: #67B26F;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #43cf9c, #b9cebb);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #43cf9c, #b9cebb);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .column-nav .column a{
@@ -83,6 +83,7 @@
     background: #67B26F;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #43cf9c, #b9cebb);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #43cf9c, #b9cebb);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -112,6 +113,7 @@ color: #44A08D;
 
 .column-nav .column h2{
     color: #FFF;
+    
 }
 
 
