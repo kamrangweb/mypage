@@ -10,12 +10,13 @@ html,body,ul,ol{
 }
 
 body{
-    max-width: 1400px;
+    /* max-width: 1400px; */
     margin: 0 auto;
     padding: 0;
     /* overflow: hidden; */
     overflow-y: visible;
     height: 100%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 html{
@@ -24,9 +25,7 @@ html{
     scroll-behavior: smooth;
 }
 
-body{
-    font-family: 'Montserrat', sans-serif;
-}
+
 
 ul,ol{
     list-style: none;
