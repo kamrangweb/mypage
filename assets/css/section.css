@@ -246,7 +246,7 @@ main{
 background: #159957; /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #159957, #155799); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #159957, #155799);
-    border-radius: 5px;
+    /* border-radius: 5px; */
     padding: 20px 50px;
     color: #fff;
 }
@@ -263,7 +263,7 @@ background: #159957; /* fallback for old browsers */
 .skills-section .column{
     margin-bottom: 20px;
     padding: 0;
-    height: 75px;
+    height: auto;
 }
 
 

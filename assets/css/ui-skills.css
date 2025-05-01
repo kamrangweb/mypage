@@ -1,0 +1,118 @@
+.ui-page {
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    font-size: clamp(1.0625rem, 1.4553rem, 1.3125rem);
+    grid-area: -1;
+    /* padding: 2ch; */
+  }
+  .ui-page:target {
+    display: block;
+  }
+  .ui-page :is(h1, h2) {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.33), #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Jost', sans-serif;
+    font-size: clamp(4rem, 7.5358rem, 6.25rem);
+    font-weight: 600;
+    margin: 0;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+  }
+  
+  .ui-skills {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.45);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(4em, 1fr));
+    gap: 1.5em;
+    padding: 1em;
+    max-width: 100%;
+    width: 100%;
+    overflow-x: auto;
+    margin: 0 auto;
+    padding-left: 20px;
+  }
+  .ui-skills a {
+    border-radius: 1em;
+    height: 4em;
+    width: 4em;
+    padding: 0.5em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-out;
+  }
+  .ui-skills a::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.25em;
+    height: 0.25em;
+    border-radius: 50%;
+  }
+  .ui-skills a:hover {
+    transform: scale(1.3) translateY(-10px);
+  }
+  .ui-skills a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5em;
+  }
+  [href="#home"] {
+    background-color: #6CB5C6;
+  }
+  [href="#search"] {
+    background-color: #65BDA1;
+  }
+  [href="#following"] {
+    background-color: #F5B53F;
+  }
+  [href="#settings"] {
+    background-color: #E87D44;
+  }
+  [href="#html"] {
+    background-color: #E34F26;
+  }
+  [href="#css"] {
+    background-color: #1572B6;
+  }
+  [href="#javascript"] {
+    background-color: #F7DF1E;
+  }
+  [href="#php"] {
+    background-color: #777BB4;
+  }
+  [href="#python"] {
+    background-color: #3776AB;
+  }
+  [href="#react"] {
+    background-color: #61DAFB;
+  }
+  [href="#nodejs"] {
+    background-color: #339933;
+  }
+  [href="#mysql"] {
+    background-color: #4479A1;
+  }
+  @media (max-width: 600px) {
+    .ui-skills {
+      grid-template-columns: repeat(auto-fit, minmax(3em, 1fr));
+      gap: 0.5em;
+      padding: 0.5em;
+    }
+  
+    .ui-skills a {
+      height: 3em;
+      width: 3em;
+      padding: 0.3em;
+    }
+  }
