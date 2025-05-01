@@ -7,8 +7,8 @@
     left: -100%;
     background-color: #43cf9c;
     background: #159957; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #159957, #155799); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #159957, #155799);
+    background: -webkit-linear-gradient(to right, #159957, #155799); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #159957, #155799);
     overflow-x: hidden;
     transition: 0.5s;
     margin: 0;

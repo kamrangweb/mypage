@@ -63,15 +63,27 @@
 }
 
 
+.column-nav .column .name-text{
+
+}
+
 .column-nav .column h2{
-    font-size: 25px;
+    font-size: 53px;
+    font-weight: bold;
     background: #67B26F;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #43cf9c, #b9cebb);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #43cf9c, #b9cebb);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    /* margin-bottom: 120px; */
 }
+/* 
+.column-nav .name-text a{
+    font-size: 125px;
+    
+    background-color: #00ffff;
+} */
 
 .column-nav .column a{
     display: flex;
