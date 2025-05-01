@@ -181,11 +181,24 @@ color: #44A08D;
   }
   
   .hover-underline:hover::after,
-  .hover-underline:hover::before {
+  .hover-underline:hover::before,
+  .hover-underline.active::after,
+  .hover-underline.active::before {
     transform: scaleX(1);
   }
-  
 
+
+.hover-underline.no-hover::after,
+.hover-underline.no-hover::before {
+  transform: scaleX(0);
+}
+
+.hover-underline.active::after,
+.hover-underline.active::before {
+  transform: scaleX(1);
+}
+
+  
 
 @media screen and (min-width: 900px) {     
    

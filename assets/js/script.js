@@ -85,6 +85,29 @@ document.addEventListener("DOMContentLoaded", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
+
+
+
+  const el = document.getElementById('auto-underline');
+
+  if (!el.classList.contains('active')) {
+    el.classList.add('no-hover');
+  
+    setTimeout(() => {
+      el.classList.add('active'); 
+      removeHover();              
+    }, 3000);
+  }
+  
+  function removeHover() {
+    setTimeout(() => {
+      el.classList.remove('active');    
+      el.classList.remove('no-hover');  
+    }, 3000);
+  }
+    
+
+
 });
 
 /* Scroll progress value */
@@ -163,3 +186,4 @@ document.addEventListener('mousemove', (e) => {
 document.addEventListener('mouseout', () => {
   if (cursor) cursor.style.display = 'none';
 });
+
