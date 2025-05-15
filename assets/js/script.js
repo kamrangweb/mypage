@@ -177,17 +177,29 @@ function calcScrollValue() {
   const progressValue = document.getElementById("progress-value");
   if (!scrollProgress || !progressValue) return;
 
+  // Get the scroll position
   const pos = document.documentElement.scrollTop;
-  const calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  const scrollValue = Math.round((pos * 100) / calcHeight);
+  
+  // Calculate total scrollable height
+  const calcHeight = Math.max(
+    document.documentElement.scrollHeight,
+    document.body.scrollHeight,
+    document.documentElement.clientHeight
+  ) - document.documentElement.clientHeight;
 
+  // Calculate scroll percentage
+  const scrollValue = Math.min(Math.round((pos * 100) / calcHeight), 100);
+
+  // Show/hide progress indicator
   scrollProgress.style.display = pos > 100 ? "grid" : "none";
 
+  // Add click event for smooth scroll to top
   scrollProgress.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  scrollProgress.style.background = `conic-gradient(#0c5d76 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+  // Update progress gradient
+  scrollProgress.style.background = `conic-gradient(#006A71 ${scrollValue}%, #44A08D ${scrollValue}%)`;
 }
 
 /* Mobile menu */

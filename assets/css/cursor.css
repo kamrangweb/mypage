@@ -1,30 +1,28 @@
 .cursor {
-    z-index: 9999;
-    position: fixed;
-    background: linear-gradient(45deg, #7fffd4, #87ceeb, #98fb98);
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #093637;  /* Darker blue-green color */
     border-radius: 50%;
+    position: fixed;
     pointer-events: none;
-    box-shadow: 0 0 20px rgba(135, 206, 235, 0.6),
-                0 0 40px rgba(127, 255, 212, 0.4),
-                0 0 60px rgba(152, 251, 152, 0.3);
-    animation: colors 5s infinite;
+    z-index: 9999;
+    transition: all 0.1s ease;
     transform: translate(-50%, -50%);
-    display: none;
-    margin: 0;
-    mix-blend-mode: difference;
-    transition: all 0.3s ease;
-    display: none;
+    /* Remove mix-blend-mode to eliminate dark circle effect */
+    background: transparent;  /* Remove background color */
 }
 
 .cursor.active {
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(45deg, #7fffd4, #87ceeb);
-    box-shadow: 0 0 30px rgba(135, 206, 235, 0.7),
-                0 0 60px rgba(127, 255, 212, 0.5),
-                0 0 90px rgba(152, 251, 152, 0.4);
+    transform: translate(-50%, -50%) scale(1.5);
+    border-color: #046e6c;  /* Darker blue-green for active state */
+    background: transparent;  /* Keep background transparent */
+}
+
+/* Hide cursor on mobile devices */
+@media screen and (max-width: 768px) {
+    .cursor {
+        display: none !important;
+    }
 }
 
 @keyframes colors {
