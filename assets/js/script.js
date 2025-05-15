@@ -234,6 +234,7 @@ window.addEventListener("resize", () => {
   document.getElementById("myOverlay").style.display = "none";
 });
 
+
 /* Custom cursor */
 const cursor = document.querySelector('.cursor');
 let timeout;
