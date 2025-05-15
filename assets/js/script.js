@@ -86,8 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-
-
   const el = document.getElementById('auto-underline');
 
   if (!el.classList.contains('active')) {
@@ -106,7 +104,70 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 3000);
   }
     
+  // Function to center menu items on hover
+  function centerMenuItems() {
+    const menuWrappers = document.querySelectorAll('.column-nav .column .column-nav-links');
+    const sections = document.querySelectorAll('section[id]');
 
+    // Function to center menu item and add background
+    function centerMenuItem(wrapper, link) {
+      // Center the text
+      const parentWidth = wrapper.clientWidth;
+      const icon = link.querySelector('i');
+      const iconWidth = icon ? icon.offsetWidth : 0;
+      const gap = 10;
+      const textWidth = link.scrollWidth - iconWidth - gap;
+      const totalContentWidth = iconWidth + gap + textWidth;
+      const translateValue = (parentWidth - totalContentWidth) / 2;
+      const safeTranslate = translateValue > 0 ? translateValue : 0;
+      link.style.transform = `translateX(${safeTranslate}px)`;
+      
+      // Add background
+      wrapper.style.setProperty("background", "linear-gradient(to right, #093637, #44A08D)");
+    }
+
+    // Function to reset menu item
+    function resetMenuItem(wrapper, link) {
+      link.style.transform = 'translateX(0)';
+      wrapper.style.backgroundColor = '';
+      wrapper.style.setProperty("background", "none");
+      wrapper.style.borderRadius = '';
+    }
+
+    // Existing hover functionality for menu items
+    menuWrappers.forEach(wrapper => {
+      const link = wrapper.querySelector('a');
+
+      wrapper.addEventListener('mouseenter', function () {
+        centerMenuItem(wrapper, link);
+      });
+
+      wrapper.addEventListener('mouseleave', function () {
+        resetMenuItem(wrapper, link);
+      });
+    });
+
+    // Add hover functionality for sections
+    sections.forEach(section => {
+      const sectionId = section.getAttribute('id');
+      const correspondingLink = document.querySelector(`.column-nav-links a[href="#${sectionId}"]`);
+      
+      if (correspondingLink) {
+        const wrapper = correspondingLink.parentElement;
+
+        section.addEventListener('mouseenter', function() {
+          centerMenuItem(wrapper, correspondingLink);
+        });
+
+        section.addEventListener('mouseleave', function() {
+          resetMenuItem(wrapper, correspondingLink);
+        });
+      }
+    });
+  }
+  
+  // Call the function when DOM is loaded
+  centerMenuItems();
 
 });
 
@@ -172,15 +233,22 @@ let timeout;
 document.addEventListener('mousemove', (e) => {
   if (!cursor) return;
 
-  const { pageX: x, pageY: y } = e;
+  const { clientX: x, clientY: y } = e;
   cursor.style.top = y + "px";
   cursor.style.left = x + "px";
   cursor.style.display = 'block';
+});
 
-  clearTimeout(timeout);
-  timeout = setTimeout(() => {
-    cursor.style.display = 'none';
-  }, 1500);
+// Add cursor effects for interactive elements
+const interactiveElements = document.querySelectorAll('a, button, .column-nav-links, input, textarea');
+interactiveElements.forEach(element => {
+  element.addEventListener('mouseenter', () => {
+    cursor.classList.add('active');
+  });
+  
+  element.addEventListener('mouseleave', () => {
+    cursor.classList.remove('active');
+  });
 });
 
 document.addEventListener('mouseout', () => {

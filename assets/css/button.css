@@ -17,15 +17,17 @@ background: linear-gradient(to right, #093637, #44A08D); /* W3C, IE 10+/ Edge, F
 border-radius: 10px;
 color: #44A08D;
     width: 100%;
+    padding: 0 10px;
+    text-align: center;
 }
 
 .port-site-button:hover{
     transition: 0.5s;
-    background-color: #589912;
+    /* background-color: #589912; */
 }
 .port-site-item .button{
-    display: inline-block;
-    margin-top: auto;
+    /* display: inline-block; */
+    margin: 0;
 }
 
 
@@ -34,15 +36,17 @@ color: #44A08D;
     background: linear-gradient(to right, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-radius: 10px;
     color: #bdd8e1;
-    font-size: 16px;
-    font-weight: 600;
+   
     cursor: none;
     width: 100%;
+    
 }
 .green-button:hover{
     transition: 0.5s;
-    background-color: #589912;
 }
+
+
+
 @media screen and (max-width: 1024px) {
     button, .button{
         margin: 0 auto;

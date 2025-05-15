@@ -1,66 +1,54 @@
 @media screen and (max-width: 900px) {
-    .main-section{
+    .main-section {
         margin-left: 0;
-        /* padding: 10px; */
-        transition: 1s;
         width: 100%;
+        transition: 1s;
     }
 
-    
-    .header{
+    .header {
         display: none;
     }
 
-    .port-header .port-header-change{
+    .port-header .port-header-change {
         display: block;
     }
 
-    main .container{
+    main .container {
         width: 100%;
     }
-
 }
 
-
 @media screen and (min-width: 900px) {
-    
-    .port-header .column.port-header-change{
+    .port-header .column.port-header-change {
         display: none;    
     }
 
-    .site-row .column{
+    .site-row .column {
         margin-bottom: 20px;
     }
-
 }
 
-
-
- section{
-    /* max-width: 1200px; */
+section {
     margin-left: 300px;
     overflow-x: hidden;
     overflow: hidden;
-    /* position: fixed; */
     padding: 0;
 }
 
-main{
-    padding: 0;margin: 0;
+main {
+    padding: 0;
+    margin: 0;
 }
 
 .section-header{
     margin-bottom: 100px;
 }
 
-
 .port-header{
     display: flex;
     flex-direction: column;
     /* text-align: left; */
 }
-
-
 
 .port-header .column{
     margin: 0;
@@ -69,16 +57,18 @@ main{
     padding: 10px;
 }
 
-
-
-
 .port-header-item{
     width: 100%;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: space-between;
-    text-align: center;
+    justify-content: space-between; */
+    /* text-align: center; */
     font-size: 22px;
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+    display: flex;
+        justify-content: left;
+        align-items: center;
 }
 
 .port-header-item .openblock{
@@ -87,6 +77,8 @@ main{
     border-radius: 5px;
     padding: 5px 10px;
     color: #0c5d76;
+    /* margin-top: 25px; */
+    /* margin-bottom: 25px; */
 }
 
 .port-header-change{
@@ -134,14 +126,9 @@ main{
   50% { opacity: 1; }
 }
 
-  
-
-
-.top-content {
+/* .top-content {
     height: 60px;
-}
-
-
+} */
 
 .top-content img{
     border-radius: 50%;
@@ -162,8 +149,6 @@ main{
     /* filter: contrast(8); */
     /* background-color: rgba(255, 255, 255, 0.4); */
 }
-
-
 
 .site-row{
     display: flex;
@@ -208,7 +193,29 @@ main{
     margin: 0;
     border-top-left-radius: 10px;
 }
+.port-site-item a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    white-space: nowrap;
+    min-width: 140px;
+    text-align: center;
+}
 
+.green-button i {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    font-size: 16px !important;
+
+}
+
+.port-site-item:hover a i {
+    opacity: 1;
+    transform: translateX(0);
+}
 
 .port-site-item-content{
     padding: 10px 0;
@@ -243,9 +250,9 @@ main{
     text-align: center;
     flex-direction: column;
     
-background: #159957; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #159957, #155799); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #159957, #155799);
+    background: #159957; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #159957, #155799); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #159957, #155799);
     /* border-radius: 5px; */
     padding: 20px 50px;
     color: #fff;
@@ -265,7 +272,6 @@ background: #159957; /* fallback for old browsers */
     padding: 0;
     height: auto;
 }
-
 
 .skills{
     display: flex;
@@ -342,14 +348,11 @@ background: #159957; /* fallback for old browsers */
     width: 100%;
 }
 
-
-
 .contact-details-list{
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
-
 
 .contact-details-item:nth-child(odd){
     background: #159957; /* fallback for old browsers */
@@ -424,8 +427,6 @@ footer .copyright p, .copyright span{
     color: rgb(12, 93, 118);
     text-align: center;
 }
-
-
 
 @media screen and (max-width: 768px) {
     
@@ -503,7 +504,6 @@ footer .copyright p, .copyright span{
     }
 }
 
-
 @media screen and (max-width: 1040px){
     .contact-details-list{
         display: flex;
@@ -521,14 +521,11 @@ footer .copyright p, .copyright span{
     }
 }
 
-
 @media screen and (min-width: 900px) and (max-width: 900px){
     
     .header{
         left: -300px;
     }
-
-
 }
 
 @media screen and (min-width: 1124px){
@@ -537,17 +534,13 @@ footer .copyright p, .copyright span{
     }
 }
 
-
 @media screen and (max-width: 336px){
     .port-site-item{
         height: 100%;
         margin-bottom: 20px;
         
     }
-
-    
 }
-
 
 @media screen and (max-width: 570px){
   
