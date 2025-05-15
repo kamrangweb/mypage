@@ -180,12 +180,8 @@ function calcScrollValue() {
   // Get the scroll position
   const pos = document.documentElement.scrollTop;
   
-  // Calculate total scrollable height
-  const calcHeight = Math.max(
-    document.documentElement.scrollHeight,
-    document.body.scrollHeight,
-    document.documentElement.clientHeight
-  ) - document.documentElement.clientHeight;
+  // Calculate total scrollable height using window properties
+  const calcHeight = document.documentElement.scrollHeight - window.innerHeight;
 
   // Calculate scroll percentage
   const scrollValue = Math.min(Math.round((pos * 100) / calcHeight), 100);
