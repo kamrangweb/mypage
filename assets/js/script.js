@@ -57,6 +57,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Add click event to all links for refresh
+  const allLinks = document.querySelectorAll('a');
+  allLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      // Don't refresh if it's an external link or has target="_blank"
+      if (!this.getAttribute('target') && !this.href.startsWith('http')) {
+        e.preventDefault();
+        window.location.reload();
+      }
+    });
+  });
+
   // Scroll animation
   ScrollReveal().reveal('.site-row', { delay: 500 });
   ScrollReveal().reveal('#about', { delay: 500 });
