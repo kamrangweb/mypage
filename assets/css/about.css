@@ -32,6 +32,7 @@
     border-radius: 8px;
     transform: skewX(15deg);
     transition: 0.5s;
+    z-index: -999;
 }
 
 .container-about .box::after {
@@ -46,6 +47,7 @@
     transform: skewX(15deg);
     transition: 0.5s;
     filter: blur(30px);
+    z-index: -999;
 }
 
 .container-about .box:hover:before,
