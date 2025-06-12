@@ -241,6 +241,9 @@ function openNav() {
     nav.style.left = "-100%";
     status = 1;
   }
+
+  var el_hamburger = document.getElementsByClassName('openblock');
+  el_hamburger[0].style.marginTop = "10px";
 }
 
 function openblock() {
@@ -250,6 +253,7 @@ function openblock() {
 }
 
 function closeblock() {
+ 
   openNav();
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
