@@ -181,6 +181,21 @@ document.addEventListener("DOMContentLoaded", () => {
   // Call the function when DOM is loaded
   centerMenuItems();
 
+  // Move down chevron click handler
+  document.getElementById('moveDown').addEventListener('click', function() {
+    // Get the next section
+    const currentSection = document.querySelector('.section.active');
+    const nextSection = currentSection.nextElementSibling;
+    
+    if (nextSection) {
+        // Smooth scroll to next section
+        nextSection.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+  });
+
 });
 
 /* Scroll progress value */
