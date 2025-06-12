@@ -289,4 +289,3 @@ interactiveElements.forEach(element => {
 document.addEventListener('mouseout', () => {
   if (cursor) cursor.style.display = 'none';
 });
-
