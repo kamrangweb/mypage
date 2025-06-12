@@ -26,9 +26,9 @@ button.back-to-top{
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   margin-top: -5px;
-place-items: center;
-padding-top: 5px;
-animation: button-top 2s ease-in-out infinite alternate;
+  place-items: center;
+  padding-top: 5px;
+  animation: button-top 2s ease-in-out infinite alternate;
 
 }
 button.back-to-top:hover,
@@ -47,7 +47,7 @@ button.back-to-top::after {
   margin: 17px auto 0;*/
   width: 10px; 
   border-radius:20px;
-  visibility: hidden;
+  visibility: visible;
   padding-bottom:1px;
   vertical-align: middle;
 }
