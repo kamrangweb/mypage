@@ -566,22 +566,13 @@ footer .copyright p, .copyright span{
 .contact-header h2 {
     font-size: 2em;
     font-weight: bold;
-    background: #67B26F;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #43cf9c, #b9cebb);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #43cf9c, #b9cebb);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
+    color: #0c5d76 !important;
+
 }
 .portfolio-header h2,
 .contact-header h2 {
-    background: #67B26F !important;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #0c5d76, #558c5d);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #0c5d76, #558c5d) !important;
-    background-clip: text !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
+    color: #0c5d76 !important;
 }
 
 
