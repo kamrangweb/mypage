@@ -196,9 +196,14 @@
 @media screen and (max-width: 768px) {
     .container-about .box {
         /* width: 280px; */
-        height: 350px;
+        /* height: 350px; */
         margin: 20px;
+        height: auto;
+        padding: 0px;
+        margin: 0px;
     }
+
+
 
     .container-about .box .content {
         padding: 15px 30px;
