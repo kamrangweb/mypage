@@ -183,13 +183,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Move down chevron click handler
   document.getElementById('moveDown').addEventListener('click', function() {
-    // Get the next section
-    const currentSection = document.querySelector('.section.active');
-    const nextSection = currentSection.nextElementSibling;
+    // Get the portfolio section
+    const portfolioSection = document.getElementById('portfolio');
     
-    if (nextSection) {
-        // Smooth scroll to next section
-        nextSection.scrollIntoView({ 
+    if (portfolioSection) {
+        // Smooth scroll to portfolio section
+        portfolioSection.scrollIntoView({ 
             behavior: 'smooth',
             block: 'start'
         });
