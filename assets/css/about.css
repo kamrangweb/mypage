@@ -12,7 +12,7 @@
 .container-about .box {
     position: relative;
     width: auto;
-    height: 500px;
+    height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,7 +148,7 @@
 
 .container-about .box:hover .content {
     /* left: -25px; */
-    padding: 60px 40px;
+    padding: 35px 40px;
 }
 
 .container-about .box .content h2 {
@@ -161,6 +161,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 10px;
+    margin-top: -10px;
 }
 
 .container-about .box .content p {
