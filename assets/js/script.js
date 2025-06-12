@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", () => {
     const btn = document.querySelector('button.back-to-top');
     if (!btn) return;
-    btn.classList.toggle('show', window.scrollY > 200);
+    btn.classList.toggle('show', window.scrollY > 100);
   });
 
   const backToTopBtn = document.querySelector('button.back-to-top');
