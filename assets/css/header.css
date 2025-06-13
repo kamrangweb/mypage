@@ -16,6 +16,17 @@
 }
 
 
+.top-content{
+    position: relative;
+    width: auto;
+    font-size: 22px;
+    padding: 25px !important;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+
 
 .animate-left{
     position:relative;
@@ -318,6 +329,40 @@
     .column-nav .column h2{
         text-align: left;
         margin-left: 10px;
+    }
+
+    .port-header-change {
+        position: relative;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+        background: transparent;
+        /* padding: 20px; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background 0.3s ease;
+    }
+
+    .port-header-change.scrolled {
+        background: #159957;
+        background: linear-gradient(to right, #159957, #155799);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .port-header-item.top-content {
+        /* padding: 10px !important; */
+    }
+
+    .port-header-item.top-content .green-button {
+        margin: 0;
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+
+    .main-section {
+        margin-top: 0px;
     }
 }
 

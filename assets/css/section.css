@@ -68,18 +68,28 @@ main {
     padding-top: 25px !important;
     padding-bottom: 25px !important;
     display: flex;
-        justify-content: left;
-        align-items: center;
+    justify-content: left;
+    align-items: center;
+}
+.port-header-item .button {
+   /* margin-bottom: 10px; */
+   /* padding: 0; */
+   padding: 10px 20px;
+   cursor: default;
+
 }
 
 .port-header-item .openblock{
     margin: 0 auto;
+    /* margin-bottom: 15px; */
     border: 2px solid #0c5d76;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 5px 10px;
     color: #0c5d76;
     /* margin-top: 25px; */
     /* margin-bottom: 25px; */
+    width: 50px;
+    text-align: center;
 }
 
 .port-header-change{
@@ -464,6 +474,7 @@ footer .copyright p, .copyright span{
     
     .column-typed-image{       
         background-position: center;    
+        /* margin-top: 450px; */
     }
 
     .portfolio-header h1{

@@ -57,6 +57,38 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Add scroll event for header background and position
+  const header = document.querySelector('.port-header-change');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+      header.style.position = 'fixed';
+      header.style.padding = '0px';
+      header.style.height = '60px';
+    } else {
+      header.classList.remove('scrolled');
+      header.style.position = 'relative';
+      header.style.padding = '1px 10px';
+    }
+  });
+
+  // Handle smooth scrolling with offset for fixed header
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        const headerHeight = header.classList.contains('scrolled') ? 65 : 0;
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: targetPosition - headerHeight,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
   // Add click event to all links for refresh
   const allLinks = document.querySelectorAll('a');
   allLinks.forEach(link => {
@@ -243,7 +275,7 @@ function openNav() {
   }
 
   var el_hamburger = document.getElementsByClassName('openblock');
-  el_hamburger[0].style.marginTop = "10px";
+  // el_hamburger[0].style.marginTop = "10px";
 }
 
 function openblock() {
