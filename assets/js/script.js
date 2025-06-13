@@ -64,11 +64,13 @@ document.addEventListener("DOMContentLoaded", () => {
       header.classList.add('scrolled');
       header.style.position = 'fixed';
       header.style.padding = '0px';
-      header.style.height = '60px';
+      header.style.height = '65px';
     } else {
       header.classList.remove('scrolled');
       header.style.position = 'relative';
       header.style.padding = '1px 10px';
+      header.style.height = 'auto';
+
     }
   });
 
