@@ -6,13 +6,16 @@
     position: fixed;
     pointer-events: none;
     z-index: 9999;
+    -webkit-transition: all 0.1s ease;
     transition: all 0.1s ease;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     /* Remove mix-blend-mode to eliminate dark circle effect */
     background: transparent;  /* Remove background color */
 }
 
 .cursor.active {
+    -webkit-transform: translate(-50%, -50%) scale(1.5);
     transform: translate(-50%, -50%) scale(1.5);
     border-color: #046e6c;  /* Darker blue-green for active state */
     background: transparent;  /* Keep background transparent */
@@ -25,14 +28,32 @@
     }
 }
 
-@keyframes colors {
+@-webkit-keyframes colors {
     0% {
+        -webkit-filter: hue-rotate(0deg) brightness(1.2);
         filter: hue-rotate(0deg) brightness(1.2);
     }
     50% {
+        -webkit-filter: hue-rotate(180deg) brightness(1.2);
         filter: hue-rotate(180deg) brightness(1.2);
     }
     100% {
+        -webkit-filter: hue-rotate(360deg) brightness(1.2);
+        filter: hue-rotate(360deg) brightness(1.2);
+    }
+}
+
+@keyframes colors {
+    0% {
+        -webkit-filter: hue-rotate(0deg) brightness(1.2);
+        filter: hue-rotate(0deg) brightness(1.2);
+    }
+    50% {
+        -webkit-filter: hue-rotate(180deg) brightness(1.2);
+        filter: hue-rotate(180deg) brightness(1.2);
+    }
+    100% {
+        -webkit-filter: hue-rotate(360deg) brightness(1.2);
         filter: hue-rotate(360deg) brightness(1.2);
     }
 }
@@ -40,27 +61,51 @@
 .cursor:before {
     content: '';
     position: absolute;
+    background: -webkit-linear-gradient(45deg, #7fffd4, #87ceeb);
     background: linear-gradient(45deg, #7fffd4, #87ceeb);
     width: 100%;
     height: 100%;
     opacity: 0.3;
     left: 50%;
     top: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     border-radius: 50%;
+    -webkit-animation: pulse 2s infinite;
     animation: pulse 2s infinite;
 }
 
-@keyframes pulse {
+@-webkit-keyframes pulse {
     0% {
+        -webkit-transform: translate(-50%, -50%) scale(1);
         transform: translate(-50%, -50%) scale(1);
         opacity: 0.3;
     }
     50% {
+        -webkit-transform: translate(-50%, -50%) scale(1.5);
         transform: translate(-50%, -50%) scale(1.5);
         opacity: 0.2;
     }
     100% {
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.3;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        -webkit-transform: translate(-50%, -50%) scale(1.5);
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0.2;
+    }
+    100% {
+        -webkit-transform: translate(-50%, -50%) scale(1);
         transform: translate(-50%, -50%) scale(1);
         opacity: 0.3;
     }

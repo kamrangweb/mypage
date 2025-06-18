@@ -8,6 +8,10 @@ body{
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    /* Safari-specific optimizations */
+    -webkit-overflow-scrolling: touch;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .container{
@@ -25,18 +29,22 @@ body{
 /*@Columns*/
 
 .row{
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-left: -1rem;
     margin-right: -1rem;
 }
 
 .flex-fill{
+    -webkit-flex: 1 0 0;
     flex: 1 0 0;
     max-width: 100%;
 }
 
 .flex-2{
+    -webkit-flex: 0 0 calc(100% / 2);
     flex: 0 0 calc(100% / 2);
     max-width: calc(100% / 2);
 }
@@ -50,12 +58,14 @@ body{
 /*@Justify*/
 
 .justify-between{
+    -webkit-justify-content: space-between;
     justify-content: space-between;
 }
 
 /*@Aligns*/
 
 .align-center{
+    -webkit-align-items: center;
     align-items: center;
 }
 
@@ -71,6 +81,7 @@ body{
     }
 
     .flex-2{
+        -webkit-flex: 0 0 100%;
         flex: 0 0 100%;
         max-width: 100%;
     }

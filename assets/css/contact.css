@@ -14,9 +14,10 @@
     position: relative;
     overflow: hidden;
     /* border-radius: 15px; */
+    -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    -webkit-perspective: 1000px;
     perspective: 1000px;
-
   }
   
   .holographic-card i {
@@ -33,23 +34,33 @@
     left: -50%;
     width: 200%;
     height: 200%;
+    background: -webkit-linear-gradient(
+      0deg, 
+      transparent, 
+      transparent 30%, 
+      rgba(0,255,255,0.3)
+    );
     background: linear-gradient(
       0deg, 
       transparent, 
       transparent 30%, 
       rgba(0,255,255,0.3)
     );
+    -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
+    -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     opacity: 0;
   }
   
   .holographic-card:hover {
+    -webkit-transform: scale(1.05);
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(0,255,255,0.5);
   }
   
   .holographic-card:hover::before {
     opacity: 1;
+    -webkit-transform: rotate(-45deg) translateY(150%);
     transform: rotate(-45deg) translateY(150%);
   }

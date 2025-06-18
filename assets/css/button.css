@@ -12,16 +12,17 @@ button, .button{
 .port-site-button{
     margin-top: auto;
     background: #44A08D;  /* fallback for old browsers */
- /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-border-radius: 10px;
-color: #44A08D;
+    background: -webkit-linear-gradient(to right, #093637, #44A08D); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 10px;
+    color: #44A08D;
     width: 100%;
     padding: 0 10px;
     text-align: center;
 }
 
 .port-site-button:hover{
+    -webkit-transition: 0.5s;
     transition: 0.5s;
     /* background-color: #589912; */
 }
@@ -33,6 +34,7 @@ color: #44A08D;
 
 .green-button{
     background: #44A08D; 
+    background: -webkit-linear-gradient(to right, #093637, #44A08D); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-radius: 10px;
     color: #bdd8e1;
@@ -42,6 +44,7 @@ color: #44A08D;
     
 }
 .green-button:hover{
+    -webkit-transition: 0.5s;
     transition: 0.5s;
 }
 
@@ -65,6 +68,7 @@ color: #44A08D;
     position: absolute;
     bottom: 20px;
     left: 50%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     text-align: center;
     width: 100%;
@@ -74,6 +78,7 @@ color: #44A08D;
 #moveDown {
     color: #fff;
     cursor: pointer;
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     display: inline-block;
     /* margin-top: -100px; */
@@ -81,23 +86,43 @@ color: #44A08D;
 }
 
 #moveDown:hover {
+    -webkit-transform: translateY(5px);
     transform: translateY(5px);
     color: #fff;
 }
 
-@keyframes bounce {
+@-webkit-keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
+        -webkit-transform: translateY(0);
         transform: translateY(0);
     }
     40% {
+        -webkit-transform: translateY(-20px);
         transform: translateY(-20px);
     }
     60% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+    60% {
+        -webkit-transform: translateY(-10px);
         transform: translateY(-10px);
     }
 }
 
 .bounce {
+    -webkit-animation: bounce 2s infinite;
     animation: bounce 2s infinite;
 }
 

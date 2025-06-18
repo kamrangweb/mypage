@@ -10,7 +10,11 @@
     background: -webkit-linear-gradient(to right, #159957, #155799); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #159957, #155799);
     overflow-x: hidden;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
     margin: 0;
+    /* Safari-specific optimizations */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
   
