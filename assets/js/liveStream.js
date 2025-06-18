@@ -1,3 +1,4 @@
+// Safari-compatible requestAnimationFrame polyfill
 window.requestAnimFrame = (function(callback) {
     return window.requestAnimationFrame ||
            window.webkitRequestAnimationFrame ||
@@ -15,6 +16,9 @@ var number = 4,
     y = 100;
 
 function draw(params, ctx) {
+    // Safari-specific canvas optimizations
+    ctx.save();
+    
     for (var i = 0; i < number; i++) {
         ctx.shadowBlur = 5;
         ctx.beginPath();
@@ -35,11 +39,14 @@ function draw(params, ctx) {
         ctx.lineWidth = 0.4 * radius;
         ctx.stroke();
     }
+    
+    ctx.restore();
 }
 
 function animate(params, canvas, ctx) {
     let bool = 0;
     let speed = 1;
+    let animationId = null;
 
     function loop() {
         params.blur = Math.random() * 10 + 10;
@@ -65,28 +72,61 @@ function animate(params, canvas, ctx) {
                 params.rad[a] = 0;
         }
 
+        // Safari-specific canvas clearing optimization
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         draw(params, ctx);
 
-        requestAnimFrame(loop);
+        animationId = requestAnimFrame(loop);
     }
 
     loop();
-}
-
-// Bütün canvaslar için ayrı ayrı işlem yap
-var canvases = document.getElementsByClassName("myCanvas");
-for (let i = 0; i < canvases.length; i++) {
-    let canvas = canvases[i];
-    let ctx = canvas.getContext("2d");
-
-    let params = {
-        blur: Math.random() * 10 + 10,
-        color: ["black", "black", "black", "black", "black"],
-        color2: ["black", "black", "black", "black", "black"],
-        rad: [0, 0, 0, 0, 0]
+    
+    // Cleanup function for Safari memory management
+    return function() {
+        if (animationId) {
+            cancelAnimationFrame(animationId);
+        }
     };
-
-    draw(params, ctx);
-    animate(params, canvas, ctx);
 }
+
+// Safari-compatible canvas initialization
+document.addEventListener('DOMContentLoaded', function() {
+    // Bütün canvaslar için ayrı ayrı işlem yap
+    var canvases = document.getElementsByClassName("myCanvas");
+    var cleanupFunctions = [];
+    
+    for (let i = 0; i < canvases.length; i++) {
+        let canvas = canvases[i];
+        
+        // Safari-specific canvas setup
+        canvas.style.display = 'block';
+        canvas.style.imageRendering = '-webkit-optimize-contrast';
+        canvas.style.imageRendering = 'optimize-contrast';
+        
+        let ctx = canvas.getContext("2d");
+        
+        // Safari-specific context optimizations
+        ctx.imageSmoothingEnabled = true;
+        ctx.imageSmoothingQuality = 'high';
+
+        let params = {
+            blur: Math.random() * 10 + 10,
+            color: ["black", "black", "black", "black", "black"],
+            color2: ["black", "black", "black", "black", "black"],
+            rad: [0, 0, 0, 0, 0]
+        };
+
+        draw(params, ctx);
+        let cleanup = animate(params, canvas, ctx);
+        cleanupFunctions.push(cleanup);
+    }
+    
+    // Safari-specific cleanup on page unload
+    window.addEventListener('beforeunload', function() {
+        cleanupFunctions.forEach(function(cleanup) {
+            if (typeof cleanup === 'function') {
+                cleanup();
+            }
+        });
+    });
+});

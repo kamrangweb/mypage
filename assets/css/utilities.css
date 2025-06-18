@@ -6,7 +6,6 @@
     text-align: right;
 }
 
-
 .text-center{
     text-align: center;
 }
@@ -24,11 +23,9 @@
 }
 
 .display-flex{
+    display: -webkit-flex;
     display: flex;
 }
-
-
-
 
 .margin-auto{
     margin: 0 auto;
@@ -41,7 +38,6 @@
 h1, h2{
     color: rgb(12, 93, 118);
 }
-
 
 @media screen and (min-width: 1024px) {
     .desktop-none{
@@ -91,18 +87,19 @@ h1, h2{
     }
 
     .justify-mobile-center{
+        -webkit-justify-content: center;
         justify-content: center;
     }
 
     .justify-between{
+        -webkit-justify-content: space-between;
         justify-content: space-between;
     }
-
-    
 }
 
 @media (max-width: 768px) {
     html {
+      -webkit-scroll-behavior: smooth;
       scroll-behavior: smooth; 
     }
 
@@ -111,5 +108,4 @@ h1, h2{
         /* margin-left: -50px; */
         margin: 0 30px;
     }
-    
-  }
+}

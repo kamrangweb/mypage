@@ -6,13 +6,11 @@
 	/* --regular-font: 'Inter', sans-serif; */
 }
 
-
-
-
 .tags {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
+	display: -webkit-flex;
 	display: flex;
 	gap: 1rem;
 }
@@ -22,10 +20,14 @@
 	font-family: var(--regular-font);
 	font-size: 1rem;
 	border-radius: 100rem;
+	-webkit-box-shadow: 0 0 0 2px var(--light-color);
 	box-shadow: 0 0 0 2px var(--light-color);
 	background-color: transparent;
 	color: var(--dark-color);
 	font-weight: bold;
+	-webkit-transition:
+		background-color 250ms ease,
+		box-shadow 250ms ease;
 	transition:
 		background-color 250ms ease,
 		box-shadow 250ms ease;
@@ -48,11 +50,13 @@
 	height: .5rem;
 	border-radius: 100%;
 	background-color: var(--color);
+	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
 
 .tag:hover{
 	background-color: var(--light-color);
+	-webkit-box-shadow: 0 0 0 calc(2px + .25rem) var(--light-color);
 	box-shadow: 0 0 0 calc(2px + .25rem) var(--light-color);
     color: rgb(12, 93, 118);
 }
@@ -60,60 +64,74 @@
     color: rgb(12, 93, 118);
 }
 
-
 .liquid-morph-container {
+	display: -webkit-flex;
 	display: flex;
+	-webkit-justify-content: center;
 	justify-content: center;
+	-webkit-align-items: center;
 	align-items: center;
 	height: 100vh;
 	background: #001;
-  }
+}
   
-  .liquid-morph-element {
+.liquid-morph-element {
 	width: 250px;
 	height: 100px;
 	background: #0a2342;
+	display: -webkit-flex;
 	display: flex;
+	-webkit-justify-content: center;
 	justify-content: center;
+	-webkit-align-items: center;
 	align-items: center;
 	position: relative;
 	border-radius: 50px;
 	overflow: hidden;
+	-webkit-transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
+}
   
-  .liquid-morph-element span {
+.liquid-morph-element span {
 	color: #fff;
 	font-size: 1.5rem;
 	position: relative;
 	z-index: 2;
-  }
+}
   
-  .liquid-morph-element::before {
+.liquid-morph-element::before {
 	content: '';
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
+	background: -webkit-conic-gradient(
+	  #0ff 0deg, 
+	  #0a2342 120deg, 
+	  #0ff 240deg
+	);
 	background: conic-gradient(
 	  #0ff 0deg, 
 	  #0a2342 120deg, 
 	  #0ff 240deg
 	);
+	-webkit-transition: all 0.6s ease;
 	transition: all 0.6s ease;
 	opacity: 0;
+	-webkit-transform: scale(0);
 	transform: scale(0);
-  }
+}
   
-  .liquid-morph-element:hover {
+.liquid-morph-element:hover {
 	border-radius: 50px;
   /*   transform: rotate(15deg); */
-  }
+}
   
-  .liquid-morph-element:hover::before {
+.liquid-morph-element:hover::before {
 	opacity: 0.5;
+	-webkit-transform: scale(2);
 	transform: scale(2);
-  }
+}
 
-  /* skills-web */
+/* skills-web */
