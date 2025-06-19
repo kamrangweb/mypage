@@ -48,5 +48,3 @@ mypage/
 - Accessibility support
 
 This portfolio showcases modern web development techniques with a focus on user experience, performance, and cross-browser compatibility. Perfect for demonstrating frontend skills and project work.
-
-

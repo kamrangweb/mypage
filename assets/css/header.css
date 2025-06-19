@@ -3,8 +3,8 @@
     min-height: 100vh;
     width: 300px;
     background: #159957; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #159957, #155799); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #159957, #155799);
+    background: -webkit-linear-gradient(to right, #159957, #085b62); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #159957, #085b62);
     position: fixed;
     top: 0;
     left: 0;

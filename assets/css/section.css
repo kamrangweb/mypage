@@ -197,8 +197,8 @@ main {
     padding: 10px;
     border: 1px solid #73c4f6;
     background: #159957; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #159957, #155799); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #159957, #155799);
+    background: -webkit-linear-gradient(to right, #159957, #085b62); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #159957, #085b62);
     border-top-left-radius: 20px;
     text-align: center;
     position: relative;
@@ -289,8 +289,8 @@ main {
     flex-direction: column;
     
     background: #159957; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #159957, #155799); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #159957, #155799);
+    background: -webkit-linear-gradient(to right, #159957, #085b62); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #159957, #085b62);
     /* border-radius: 5px; */
     padding: 20px 50px;
     color: #fff;
@@ -411,14 +411,14 @@ main {
 
 .contact-details-item:nth-child(odd){
     background: #159957; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #159957, #155799); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #159957, #155799);
+    background: -webkit-linear-gradient(to right, #159957, #085b62); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #159957, #085b62);
 }
 .contact-details-item{
     text-align: center;
     background: #159957; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #159957, #155799); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #159957, #155799);
+    background: -webkit-linear-gradient(to right, #159957, #085b62); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #159957, #085b62);
     
     height: 140px;
     width: 30%;
