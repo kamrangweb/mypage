@@ -1,0 +1,88 @@
+/*@Container*/
+body{
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    /* Safari-specific optimizations */
+    -webkit-overflow-scrolling: touch;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.container-large{
+    max-width: 1400px;
+    margin: 0 auto;    
+}
+
+
+
+/*@Columns*/
+
+.row{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+.flex-fill{
+    -webkit-flex: 1 0 0;
+    flex: 1 0 0;
+    max-width: 100%;
+}
+
+.flex-2{
+    -webkit-flex: 0 0 calc(100% / 2);
+    flex: 0 0 calc(100% / 2);
+    max-width: calc(100% / 2);
+}
+
+.column{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+/*@Justify*/
+
+.justify-between{
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+/*@Aligns*/
+
+.align-center{
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1024px ) {
+    .row{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .column{
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+
+    .flex-2{
+        -webkit-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,168 @@
+@import '../../styles/variables.css';
+
+/* Header Ana Yapı */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg-panel-soft);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari desteği için */
+  border-bottom: 1px solid var(--border-strong); /* Daha belirgin bir sınır */
+  z-index: 1000; /* Diğer elementlerin üstünde kalması için yükseltildi */
+  transition: var(--transition-base);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-md) var(--spacing-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Stili */
+.header-logo h2 {
+  color: var(--primary);
+  font-family: var(--font-family);
+  font-size: var(--font-size-2xl); /* Biraz daha belirgin yapıldı */
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+/* Navigasyon Alanı */
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+}
+
+.nav-link {
+  color: var(--text-light); /* Gri yerine mavimsi beyaz daha okunaklı olur */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  position: relative;
+  transition: var(--transition-fast);
+}
+
+/* Hover Efekti - Alt Çizgi */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--accent)); /* Geçişli renk */
+  transition: var(--transition-base);
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* --- Responsive Ayarlar --- */
+
+@media (max-width: 768px) {
+  .header-nav {
+    gap: var(--spacing-md);
+  }
+  
+  .nav-link {
+    font-size: var(--font-size-sm);
+  }
+}
+
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: row; /* Mobil tasarımda genelde yan yana logo-hamburger tercih edilir */
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .header-logo h2 {
+    font-size: var(--font-size-xl);
+  }
+
+  /* Mobil menü genellikle hamburger menüye dönüşür ancak 
+     mevcut flex yapını korumak istersen: */
+  .header-nav {
+    gap: var(--spacing-sm);
+  }
+}
+
+
+/* Masaüstünde Hamburger'i gizle */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 1100;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--primary);
+}
+
+/* --- Mobil Tasarım (768px ve altı) --- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  /* Hamburger Animasyonu (X şekline dönüşme) */
+  .hamburger.active .bar:nth-child(2) { opacity: 0; }
+  .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+  .header-nav {
+    position: fixed;
+    left: -100%; /* Menü kapalıyken solda gizli */
+    top: 0;
+    flex-direction: column;
+    background: var(--bg-panel-soft);
+    backdrop-filter: blur(15px);
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    transition: 0.4s;
+    justify-content: center;
+    gap: var(--spacing-xl);
+    z-index: 1050;
+  }
+
+  .header-nav.open {
+    left: 0; /* Menü açıldığında ekranı kapla */
+  }
+
+  .nav-link {
+    font-size: var(--font-size-xl);
+  }
+
+  /* .mobile-btn {
+    margin-top: var(--spacing-md);
+    
+  } */
+
+  .mobile-btn {
+    width: 100%;
+    max-width: 300px; /* Butonun devasa olmasını engeller */
+    margin: var(--spacing-md) auto 0 auto; /* Üstten boşluk ve yatayda ortalama */
+    text-align: center;
+    display: block; /* Genişlik komutunun çalışması için */
+  }
+  
+}

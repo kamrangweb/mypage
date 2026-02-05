@@ -1,0 +1,111 @@
+.relative{
+    position: relative;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.font-size-40{
+    font-size: 40px;
+}
+
+.font-size-700{
+    font-size: 40px;
+}
+
+.text-white{
+    color: #4B5e68;
+}
+
+.display-flex{
+    display: -webkit-flex;
+    display: flex;
+}
+
+.margin-auto{
+    margin: 0 auto;
+}
+
+.margin-top-30{
+    margin-top: 30px;
+}
+
+h1, h2{
+    color: rgb(12, 93, 118);
+}
+
+@media screen and (min-width: 1024px) {
+    .desktop-none{
+        display: none !important;
+    }
+
+    .desktop-show{
+        display: block !important;
+    }
+
+    .margin-bottom-30{
+        margin-bottom: 30px;
+    }
+    .margin-bottom-80{
+        margin-bottom: 80px;
+    }
+    .margin-bottom-150{
+        margin-bottom: 150px;
+    }
+    
+    .margin-bottom-95{
+        margin-bottom: 95px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .mobile-none{
+        display: none !important;
+    }
+
+    .mobile-show{
+        display: block !important;
+    }
+
+    .margin-bottom-30{
+        margin-bottom: 15px;
+    }
+    .margin-bottom-80{
+        margin-bottom: 15px;
+    }
+    .margin-bottom-150{
+        margin-bottom: 30px;
+    }
+    
+    .margin-bottom-95{
+        margin-bottom: 15px;
+    }
+
+    .justify-mobile-center{
+        -webkit-justify-content: center;
+        justify-content: center;
+    }
+
+    .justify-between{
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+      -webkit-scroll-behavior: smooth;
+      scroll-behavior: smooth; 
+    }
+
+    .tag {
+        /* gap: 3rem; */
+        /* margin-left: -50px; */
+        margin: 0 30px;
+    }
+}

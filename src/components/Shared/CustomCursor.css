@@ -1,0 +1,20 @@
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #44A08D;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  display: none;
+  z-index: 9999;
+  transition: all 0.1s ease-out;
+}
+
+.cursor.active {
+  width: 30px;
+  height: 30px;
+  border-color: #006A71;
+  background: rgba(68, 160, 141, 0.1);
+}

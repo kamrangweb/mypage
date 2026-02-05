@@ -1,0 +1,72 @@
+@import '../../styles/variables.css';
+
+.skills-section {
+  width: 100%;
+  padding: var(--spacing-3xl) var(--spacing-lg);
+  background: var(--bg-dark);
+}
+
+.skills-section h2 {
+  width: 100%;
+  color: var(--primary);
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  margin-bottom: var(--spacing-2xl);
+  text-align: center;
+}
+
+.ui-skills {
+  display: grid;
+  /* Daha esnek bir grid yapısı */
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: var(--spacing-lg);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-2xl);
+  background: var(--bg-panel-soft);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-strong);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.ui-skills a {
+  text-decoration: none;
+}
+
+.skill-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+  border: 1.5px solid; /* Kenarlık kalınlığı biraz inceltildi, daha zarif durur */
+  border-radius: var(--radius-md);
+  color: var(--text-light);
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  transition: var(--transition-base);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+  height: 100%;
+}
+
+.skill-badge:hover {
+  transform: translateY(-5px);
+  /* Hover durumunda badge rengine göre hafif bir gölge ve parlama */
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .ui-skills {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+  }
+
+  .skills-section h2 {
+    font-size: var(--font-size-2xl);
+  }
+}

@@ -1,0 +1,116 @@
+@import '../../styles/variables.css';
+
+.row-contact {
+  width: 100%;
+  padding: var(--spacing-3xl) var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  background: var(--bg-darker); /* Alt kısım daha derin bir koyulukta bitsin */
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.contact-header h2 {
+  color: var(--primary);
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+}
+
+.contact-details {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-details-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-xl);
+  width: 100%;
+  max-width: 1100px;
+}
+
+.contact-details-item {
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  transition: var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hafif bir parlama efekti için */
+.contact-details-item::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, var(--primary-soft) 0%, transparent 70%);
+  opacity: 0;
+  transition: var(--transition-base);
+  pointer-events: none;
+}
+
+.contact-details-item:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--primary);
+}
+
+.contact-details-item:hover::before {
+  opacity: 1;
+}
+
+.contact-details-item i {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: var(--spacing-md);
+  display: block;
+  transition: var(--transition-base);
+}
+
+.contact-details-item:hover i {
+  color: var(--accent); /* Hover'da ikona mor vurgu */
+}
+
+.contact-details-item h4 {
+  color: var(--text-light);
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+}
+
+.contact-details-item p {
+  color: var(--text-gray);
+  margin: 0;
+}
+
+.contact-details-item a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: var(--transition-fast);
+  font-weight: 500;
+}
+
+.contact-details-item a:hover {
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .contact-details-list {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+
+  .contact-header h2 {
+    font-size: var(--font-size-2xl);
+  }
+}
